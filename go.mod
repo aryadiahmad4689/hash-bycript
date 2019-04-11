@@ -1,4 +1,4 @@
-module hash-bycript
+module github.com/aryadiahmad4689/hash-bycript
 
 go 1.12
 
