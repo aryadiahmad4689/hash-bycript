@@ -1,22 +1,13 @@
 package compare
 
 import (
-	"math/rand"
-	"time"
-
+	"github.com/aryadiahmad4689/hash-bycript/crypto"
 	"golang.org/x/crypto/bcrypt"
 )
-
-func Crypto() int {
-	rand.Seed(time.Now().Unix())
-
-	return 4 + rand.Intn(30-4)
-
-}
 
 // Password Yang Ingin Di has
 // Masukkan Password
 func HashPassword(password string) (string, error) {
-	bytes, err := bcrypt.GenerateFromPassword([]byte(password), Crypto())
+	bytes, err := bcrypt.GenerateFromPassword([]byte(password), crypto.Crypto())
 	return string(bytes), err
 }
