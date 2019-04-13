@@ -8,7 +8,7 @@ import (
 )
 
 func Crypto() int {
-	rand.Seed(time.Now().UTC().UnixNano())
+	rand.Seed(time.Now().Unix())
 
 	return 4 + rand.Intn(30-4)
 
